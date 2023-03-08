@@ -5,7 +5,11 @@
     "build": "next build",
     "start": "next start",
     "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "e2e": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e\"",
+    "e2e:headless": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e\"",
+    "component": "cypress open --component",
+    "component:headless": "cypress run --component"
   },
   "dependencies": {
     "next": "latest",
@@ -18,8 +22,10 @@
     "@testing-library/user-event": "14.2.0",
     "@types/react": "18.0.9",
     "@types/testing-library__jest-dom": "5.14.5",
+    "cypress": "12.3.0",
     "jest": "28.1.0",
     "jest-environment-jsdom": "28.1.0",
+    "start-server-and-test": "1.15.2",
     "typescript": "4.6.4"
   }
 }
