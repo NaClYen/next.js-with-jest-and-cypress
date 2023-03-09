@@ -4,12 +4,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest --watch",
-    "test:ci": "jest --ci",
-    "e2e": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e\"",
-    "e2e:headless": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e\"",
-    "component": "cypress open --component",
-    "component:headless": "cypress run --component"
+    "test": "jest -c config/jest.config.js --watch",
+    "test:ci": "jest -c config/jest.config.js --ci",
+    "e2e": "start-server-and-test dev http://localhost:3000 \"cypress open -C cypress/cypress.config.ts --e2e\"",
+    "e2e:headless": "start-server-and-test dev http://localhost:3000 \"cypress run -C cypress/cypress.config.ts --e2e\""
   },
   "dependencies": {
     "next": "latest",
